@@ -3,7 +3,7 @@
 /* Variables */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-image: url(./backgroundImage/dark/feldgrau.png);
+  background-image: url(./backgroundImage/dark/cobalt.png);
   margin: 0px;
   padding: 0px;
   display: -webkit-box;
@@ -76,6 +76,9 @@ body p {
   text-align: center;
   margin-right: 30px;
   padding: 20px;
+  -webkit-box-shadow: 3px -7px 9px 0px #323232;
+          box-shadow: 3px -7px 9px 0px #323232;
+  text-shadow: 0px 0px 5px #656868;
 }
 
 .window1__imgContainer1 {
@@ -92,8 +95,10 @@ body p {
           box-sizing: border-box;
 }
 
-.window1__shortDescription {
-  margin-top: 10px;
+.window1__hrHeader {
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px -20px 30px 5px #FFFFFFCC, 0px 45px 62px 15px #FFFFFFCC;
+          box-shadow: 0px -20px 30px 5px #FFFFFFCC, 0px 45px 62px 15px #FFFFFFCC;
 }
 
 .window1__upPaw {
@@ -119,14 +124,13 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   padding: 20px;
   overflow-y: scroll;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 3px -7px 9px 0px #323232;
+          box-shadow: 3px -7px 9px 0px #323232;
 }
 
 .window2__headerWithAnimation {
@@ -141,6 +145,7 @@ body p {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .window2__animatedPaw {
@@ -164,6 +169,7 @@ body p {
 }
 
 .window2__sections {
+  background-color: #FFFFFF99;
   position: relative;
   margin: 0px 0px 15px 0px;
   padding: 10px 0px 10px 0px;
@@ -262,9 +268,6 @@ body p {
     font-size: 70%;
     max-width: none;
     padding: 50px 10px 50px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -272,7 +275,6 @@ body p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%;
     height: auto;
   }
   .window1, .window2 {
