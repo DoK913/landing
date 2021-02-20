@@ -41,7 +41,8 @@ body {
 }
 
 .container {
-    width: 1400px;
+    // width: 1400px;
+    max-width: 100%;
     padding: 50px 50px 50px 50px;
     box-sizing: border-box;
     display: flex;
@@ -65,13 +66,12 @@ body {
 
     //container img and avatar img at window1
     &__imgContainer1 {
+        height: auto;
         overflow: hidden;
-        max-height: 100%;
-        max-width: 100%;
 
         .window1__imgAvatar {
             max-width: 100%;
-            height: auto;
+            max-height: 100%;
             border-radius: 50%;
             border: rgb(73, 73, 206) dashed;
             box-sizing: border-box; 
@@ -122,7 +122,15 @@ body {
         }
     }
 
-    &__sectionS {
+    &__sectionCard {
+        margin-bottom: 20px;
+
+        .window2__sectionCardTitle {
+            text-align: center;
+        }
+    }
+
+    &__sections {
         position: relative;
         margin: 0px 0px 15px 0px;
         padding: 10px 0px 10px 0px;
@@ -132,8 +140,6 @@ body {
     //Thunder img at the end of scroll
     &__imgContainer2 {
         overflow: hidden;
-        max-height: 100%;
-        max-width: 100%;
 
         .window2__imgEndFoto {
             max-width: 100%;
@@ -149,6 +155,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 }
 
@@ -176,6 +183,22 @@ body {
     }
 }
 
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        font-size: 80%;     
+    }
+
+    // .window1__imgContainer1 {
+    //     height: auto;
+
+        // .window1__imgAvatar {
+        //     height: 100%;
+        // }
+    // }
+}
+
 @media (max-width: 767px) {
     .container {
         font-size: 70%;
@@ -185,7 +208,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
-        min-height: 100vh;
+        // min-height: 100vh;
         height: auto;    
     }
 
@@ -198,5 +221,15 @@ body {
 
     .window2 {
         margin: 0px;
+    }
+
+    .window1__imgContainer1 {
+        max-height: 250px;
+
+        .window1__imgAvatar {
+            max-height: 100%;
+            // height: auto;
+
+        }
     }
 }

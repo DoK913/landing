@@ -37,7 +37,7 @@ body p {
 }
 
 .container {
-  width: 1400px;
+  max-width: 100%;
   padding: 50px 50px 50px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -79,14 +79,13 @@ body p {
 }
 
 .window1__imgContainer1 {
+  height: auto;
   overflow: hidden;
-  max-height: 100%;
-  max-width: 100%;
 }
 
 .window1__imgContainer1 .window1__imgAvatar {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   border-radius: 50%;
   border: #4949ce dashed;
   -webkit-box-sizing: border-box;
@@ -156,7 +155,15 @@ body p {
   width: 100%;
 }
 
-.window2__sectionS {
+.window2__sectionCard {
+  margin-bottom: 20px;
+}
+
+.window2__sectionCard .window2__sectionCardTitle {
+  text-align: center;
+}
+
+.window2__sections {
   position: relative;
   margin: 0px 0px 15px 0px;
   padding: 10px 0px 10px 0px;
@@ -165,8 +172,6 @@ body p {
 
 .window2__imgContainer2 {
   overflow: hidden;
-  max-height: 100%;
-  max-width: 100%;
 }
 
 .window2__imgContainer2 .window2__imgEndFoto {
@@ -191,6 +196,7 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 @-webkit-keyframes rotate {
@@ -245,6 +251,12 @@ body p {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    font-size: 80%;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     font-size: 70%;
@@ -261,7 +273,6 @@ body p {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    min-height: 100vh;
     height: auto;
   }
   .window1, .window2 {
@@ -272,6 +283,12 @@ body p {
   }
   .window2 {
     margin: 0px;
+  }
+  .window1__imgContainer1 {
+    max-height: 250px;
+  }
+  .window1__imgContainer1 .window1__imgAvatar {
+    max-height: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
