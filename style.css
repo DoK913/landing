@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 /* Colors */
-/* Variables */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-image: url(./backgroundImage/dark/feldgrau.png);
+  background-image: url(./backgroundImage/dark/cobalt.png);
   margin: 0px;
   padding: 0px;
   display: -webkit-box;
@@ -14,31 +13,36 @@ body {
           justify-content: space-between;
 }
 
-body h1, body h2, body h3, body p {
+body h1,
+body h2,
+body h3,
+body p {
   margin: 0px;
   padding: 0px 10px 0px 10px;
 }
 
 body hr {
-  margin: 0px 0px 5px 0px;
+  margin: 0px 0px 10px 0px;
   padding: 0px;
 }
 
 body h1 {
-  margin: 10px 0px 3px 0px;
+  margin: 10px 0px 5px 0px;
 }
 
 body h2 {
-  margin: 7px 0px 7px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 body p {
-  margin: 5px 0px 5px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .container {
-  width: 1400px;
-  margin: 50px 50px 50px 50px;
+  max-width: 100%;
+  padding: 50px 50px 50px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,39 +53,20 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 90vh;
+  height: 100vh;
+  gap: 30px;
 }
 
-@media (max-width: 576px) {
-  .container {
-    font-size: 70%;
-    max-width: 570px;
-    margin: 50px 50px 50px 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 80vh;
-  }
-  .window1, .window2 {
-    margin-bottom: 50px;
-    max-height: 70% !important;
-  }
-  .window1__paws, .window2__animatedPaw, .window1__shortDescription {
-    display: none;
-  }
+.container__col {
+  height: 100%;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 3px -7px 9px 0px #323232;
+          box-shadow: 3px -7px 9px 0px #323232;
 }
 
 .window1 {
-  height: 100%;
-  width: 50%;
   background-image: url(./backgroundImage/white/circles.png);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,32 +75,35 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-right: 30px;
   padding: 20px;
+  text-shadow: 0px 0px 5px #656868;
 }
 
 .window1__imgContainer1 {
+  height: auto;
   overflow: hidden;
+}
+
+.window1__imgContainer1 .window1__imgAvatar {
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 50%;
   border: #4949ce dashed;
-  height: 250px;
-  width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.window1__imgAvatar {
-  width: 100%;
-  height: 100%;
-}
-
-.window1__shortDescription {
-  margin-top: 10px;
+.window1__hrHeader {
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px -20px 30px 5px #FFFFFFCC, 0px 45px 62px 15px #FFFFFFCC;
+          box-shadow: 0px -20px 30px 5px #FFFFFFCC, 0px 45px 62px 15px #FFFFFFCC;
 }
 
 .window1__upPaw {
@@ -129,8 +117,6 @@ body p {
 }
 
 .window2 {
-  height: 100%;
-  width: 50%;
   background-image: url(./backgroundImage/white/scratch.png);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,9 +125,6 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   padding: 20px;
   overflow-y: scroll;
   -webkit-box-align: center;
@@ -160,6 +143,8 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .window2__animatedPaw {
@@ -174,22 +159,32 @@ body p {
   width: 100%;
 }
 
+.window2__sectionCard {
+  margin-bottom: 20px;
+}
+
+.window2__sectionCard .window2__sectionCardTitle {
+  text-align: center;
+}
+
+.window2__sections {
+  background-color: #FFFFFF99;
+  position: relative;
+  margin: 0px 0px 15px 0px;
+  padding: 10px 0px 10px 0px;
+  border: 5px ridge #3952be;
+}
+
 .window2__imgContainer2 {
   overflow: hidden;
-  border-radius: 8px;
-  height: 250px;
-  width: 250px;
 }
 
-.window2__imgEndFoto {
-  width: 100%;
-  height: 100%;
-}
-
-.window2__sectionS {
-  position: relative;
-  margin: 0px 10px 9px 10px;
-  border: 4px ridge #3952be;
+.window2__imgContainer2 .window2__imgEndFoto {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .window2__endTextFoto {
@@ -206,6 +201,7 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 @-webkit-keyframes rotate {
@@ -257,6 +253,44 @@ body p {
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    font-size: 70%;
+    max-width: none;
+    padding: 50px 10px 50px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+  }
+  .window1,
+  .window2 {
+    margin: 0px 0px 50px 0px;
+    width: 100%;
+    height: auto;
+    overflow-y: unset;
+  }
+  .window2 {
+    margin: 0px;
+  }
+  .window1__imgContainer1 {
+    max-height: 250px;
+  }
+  .window1__imgContainer1 .window1__imgAvatar {
+    max-height: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
