@@ -6,9 +6,7 @@ $backColor: #FFFFFF99;
 $textShadow: #656868;
 $hrShadow: #FFFFFFCC;
 $borderBotColor: rgb(50, 168, 109);
-/* Variables */
-$Fsize: 20px; 
-//---------------
+// -------------------------------------
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -50,24 +48,27 @@ body {
     justify-content: center;
     flex-direction: row;
     height: 100vh;
+    gap: 30px;
+
+    &__col {
+        height: 100%;
+        width: 50%;
+        box-sizing: border-box;
+        box-shadow: 3px -7px 9px 0px rgba(50, 50, 50, 1);
+    }
 }
 
 .window1 {
-    height: 100%;
-    width: 50%;
-    box-sizing: border-box;
     background-image: url(./backgroundImage/white/circles.png);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-right: 30px;
     padding: 20px;
-    box-shadow: 3px -7px 9px 0px rgba(50, 50, 50, 1);
     text-shadow: 0px 0px 5px $textShadow;
 
-    //container img and avatar img at window1
+    // container img and avatar img at window1
     &__imgContainer1 {
         height: auto;
         overflow: hidden;
@@ -80,7 +81,7 @@ body {
             box-sizing: border-box; 
         }
     }
-    //--------
+    // -------------------------------------
 
     &__hrHeader {
         margin-bottom: 10px;
@@ -98,17 +99,12 @@ body {
 }
 
 .window2 {
-    height: 100%;
-    width: 50%;
-    box-sizing: border-box;
     background-image: url(./backgroundImage/white/scratch.png);
     display: flex;
     flex-direction: column;
-    // align-items: stretch;
     padding: 20px;
     overflow-y: scroll;
     align-items: center;
-    box-shadow: 3px -7px 9px 0px rgba(50, 50, 50, 1);
 
     &__headerWithAnimation {
         display: flex;
@@ -142,10 +138,10 @@ body {
         position: relative;
         margin: 0px 0px 15px 0px;
         padding: 10px 0px 10px 0px;
-        border: 4px ridge $SectionBorderColor;
+        border: 5px ridge $SectionBorderColor;
     }
 
-    //Thunder img at the end of scroll
+    // Thunder img at the end of scroll
     &__imgContainer2 {
         overflow: hidden;
 
@@ -156,7 +152,7 @@ body {
             box-sizing: border-box;
         }
     }
-    //-----------------------
+    // -------------------------------------
 
     &__endTextFoto {
         display: flex;
