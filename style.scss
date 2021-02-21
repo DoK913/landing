@@ -15,7 +15,10 @@ body {
     margin: 0px;
     padding: 0px;
 
-    h1,h2,h3,p {
+    h1,
+    h2,
+    h3,
+    p {
         margin: 0px;
         padding: 0px 10px 0px 10px;
     }
@@ -204,7 +207,8 @@ body {
         height: auto;    
     }
 
-    .window1, .window2 {
+    .window1, 
+    .window2 {
         margin: 0px 0px 50px 0px;
         width: 100%; 
         height: auto;
